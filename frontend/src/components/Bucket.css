@@ -1,0 +1,122 @@
+.bucket-wrapper-row {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin: 10px;
+}
+
+.p-container {
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 40px; 
+    margin-right: 5px;
+}
+
+.p-arrow-left {
+    color: #d32f2f;
+    font-weight: bold;
+    font-size: 1.4rem; /* Flecha más grande */
+    animation: slideRight 1s infinite;
+    white-space: nowrap;
+}
+
+.bucket-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90px;
+}
+
+.bucket-box {
+    border: 2px solid #333;
+    width: 100%;
+    background: white;
+    transition: all 0.3s ease;
+    z-index: 2; /* Para que quede encima de la flecha si se solapan */
+}
+
+.highlight-p {
+    border-color: #d32f2f;
+    box-shadow: 0 0 8px rgba(211, 47, 47, 0.4);
+    background-color: #fff5f5;
+}
+
+.bucket-idx {
+    background: #eee;
+    font-weight: bold;
+    border-bottom: 2px solid #333;
+    padding: 5px 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.slots-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.slot {
+    height: 30px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Consolas', monospace;
+    font-size: 1rem;
+}
+.slot:last-child { border-bottom: none; }
+.filled { background-color: #e3f2fd; font-weight: 600; }
+
+/* --- OVERFLOW CON FLECHA --- */
+.overflow-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 5px;
+    animation: dropDown 0.3s ease-out;
+}
+
+/* Dibujamos la flecha con CSS puro */
+.connector-arrow {
+    width: 0; 
+    height: 0; 
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 10px solid #d32f2f; /* Triángulo rojo hacia abajo */
+    margin-bottom: 2px;
+}
+
+.connector-line {
+    width: 2px;
+    height: 15px;
+    background-color: #d32f2f; /* Línea roja */
+    margin-bottom: -2px; /* Pegarlo a la flecha */
+}
+
+.overflow-box {
+    border: 2px dashed #d32f2f; /* Borde rojo punteado indicando "temporal" */
+    width: 90%;
+    background-color: #ffebee;
+    border-radius: 4px;
+    position: relative;
+}
+
+.overflow-item { 
+    color: #b71c1c; 
+    font-weight: bold; 
+    border-bottom: 1px dashed #ef9a9a;
+}
+.overflow-item:last-child { border-bottom: none; }
+
+@keyframes slideRight {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(5px); }
+}
+
+@keyframes dropDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
