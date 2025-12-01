@@ -62,16 +62,14 @@ Desde CLion:
 
 Levanta todo el entorno del proyecto desde la carpeta raíz:
 
-```bash
-docker compose up --build
-```
+<img width="1182" height="347" alt="image" src="https://github.com/user-attachments/assets/6f9c2be2-f5ec-422a-98a0-04ed4b8fc465" />
 
 Una vez que los servicios estén corriendo, abre **Docker Desktop** y en el panel de *Containers* selecciona el contenedor del proyecto.
 Allí verás la **URL local** generada automáticamente por el frontend o backend.
 
 Haz clic en la URL desde el dashboard para abrir la aplicación en tu navegador.
 
-<img width="1182" height="347" alt="image" src="https://github.com/user-attachments/assets/6f9c2be2-f5ec-422a-98a0-04ed4b8fc465" />
+
 
 
 ### 7️⃣ Probar el proyecto
