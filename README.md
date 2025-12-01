@@ -88,10 +88,15 @@ Una vez que la aplicación esté ejecutándose desde la URL local proporcionada 
 🗂 Estructura del Proyecto
 ProyectoAED/
 │
+
 ├── backend/            # Implementación del Linear Hashing
+
 ├── frontend/           # Interfaz visual
+
 │
+
 ├── docker-compose.yml  # Orquestación de todos los servicios
+
 ├── README.md
 
 
